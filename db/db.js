@@ -6,7 +6,7 @@ const createProducs = 'Product(name TEXT, value REAL)'
 const tables = [createUser, createProducs];
 
 export const connection = dbConfigure('pouchdb', '1.0', (cb) => {
-  console.log(cb);
+  // console.log(cb);
 }, (err) => {
   console.warn(err);
 });
