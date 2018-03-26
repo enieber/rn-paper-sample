@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { BottomNavigation } from 'react-native-paper';
-import Product from './Product';
-import User from './User';
+import Product from './product';
+import User from './user';
 
 export default class Navgation extends React.Component {
   state = {
