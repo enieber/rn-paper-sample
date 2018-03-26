@@ -12,16 +12,25 @@ export default class Navgation extends React.Component {
     ],
   };
 
+  _handleIndexChange = index => this.setState({ index });
+
   _renderScene = BottomNavigation.SceneMap({
     user: User,
     product: Product,
   });
 
+  shouldComponentUpdate(nextprops, nextState) {
+    if (this.state.index != nextState.index) {
+      return true;
+    }
+    return false;
+  };
+
   render() {
     return (
       <BottomNavigation
         navigationState={this.state}
-        onIndexChange={(index) => this.setState({ index })}
+        onIndexChange={this._handleIndexChange}
         renderScene={this._renderScene}
       />
     );

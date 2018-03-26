@@ -8,6 +8,10 @@ import {
   Provider as PaperProvider,
   BottomNavigation,
 } from 'react-native-paper';
+import {
+  createReduxBoundAddListener,
+} from 'react-navigation-redux-helpers';
+import { connect } from 'react-redux';
 
 import Navigation from './components/Navgation';
 import { productsOffline } from './db/products';

@@ -1,4 +1,4 @@
 import { AppRegistry } from 'react-native';
-import App from './App';
+import Root from './Root';
 
-AppRegistry.registerComponent('rnPouchdb', () => App);
+AppRegistry.registerComponent('rnPouchdb', () => Root);

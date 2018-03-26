@@ -18,10 +18,14 @@ export default class ListUser extends Component {
     }
   }
 
-  async componentWillMount() {
-    // const saved = await userOffline.insert(`(?, ?)`, [1, 'João de Barro']);
+  async getAllList() {
     const getUserPromise = await userOffline.get('');
     console.log(getUserPromise);
+  }
+
+  async componentDidMount() {
+    // const saved = await userOffline.insert(`(?, ?)`, [1, 'João de Barro']);
+    // this.getAllList();
     // const user = getUserPromise.item(0);
     // this.setState({ user });
   }

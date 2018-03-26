@@ -18,10 +18,14 @@ export default class ListProduct extends Component {
     }
   }
 
-  async componentWillMount() {
-    // const saved = await productsOffline.insert(`(?, ?)`, ['Lava loça Bob Esponja', 9.5]);    
+  async getAllList() {
     const getProductPromise = await productsOffline.get('');
     console.log(getProductPromise);
+  }
+
+  componentDidMount() {
+    // const saved = await productsOffline.insert(`(?, ?)`, ['Lava loça Bob Esponja', 9.5]);    
+    // this.getAllList();
     // const product = getProductPromise.item(0);
     // this.setState({ product });
   }
