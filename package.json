@@ -7,10 +7,12 @@
     "test": "jest"
   },
   "dependencies": {
-    "pouchdb-adapter-asyncstorage": "^6.4.0",
-    "pouchdb-react-native": "^6.4.0",
     "react": "16.2.0",
     "react-native": "0.53.0",
+    "react-native-paper": "^1.2.4",
+    "react-native-sqlite-storage": "^3.3.4",
+    "react-native-vector-icons": "^4.5.0",
+    "react-navigation": "^1.5.8",
     "uuid": "^3.2.1"
   },
   "devDependencies": {

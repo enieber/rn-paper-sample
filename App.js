@@ -4,47 +4,29 @@ import {
   View,
   FlatList,
 } from 'react-native';
+import {
+  Provider as PaperProvider,
+  BottomNavigation,
+} from 'react-native-paper';
 
-import { getAllUsers, insertUsers } from './users';
+import Navigation from './components/Navgation';
+import { productsOffline } from './db/products';
+import { setup } from './db/db';
 
 const uuidV4 = require('uuid/v4');
+setup();
 
 export default class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      docs: [],
-    }
-
-  }
-
-  async componentWillMount() {
-    const docs = await getAllUsers();
-    this.setState({ docs });
-  }
-
-  renderItem(item) {
-    return (
-      <View>
-        <Text>
-          {item.doc.name}
-        </Text>
-        <Text>
-          {item.doc.age}
-        </Text>
-      </View>
-    );
   }
 
   render() {
     return (
-      <FlatList
-        style={{
-          flex: 1,
-        }}
-        data={this.state.docs}
-        renderItem={({ item }) => this.renderItem(item)}
-      />
+      <PaperProvider>
+        <Navigation
+        />
+      </PaperProvider>
     );
   }
 }
