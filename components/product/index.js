@@ -1,3 +1,3 @@
-import ListProduct from './ListProduct';
+import StackProduct from './StackProduct';
 
-export default ListProduct;
+export default StackProduct;
